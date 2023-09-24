@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+html {
+  /*when we add links to diff sections it should scroll down smoothly */
+  scroll-behavior: smooth;
+}
+.navbar,
+.side-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  position: sticky;
+}
+.sidebar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  gap: 2rem; /*root em 2 times the font size of root ele*/
+  font-size: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+  text-decoration-color: white;
+}
+a:hover {
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: lightgray;
+}
+.logo {
+  font-size: 2rem;
+}
+.logo:hover {
+  cursor: default;
+}
+/*side-menu*/
+.side-nav {
+  display: none;
+}
+.side-menu {
+  position: relative;
+  display: inline-block;
+}
+.side-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.side-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+.side-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+.side-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+.side-links li {
+  list-style: none;
+}
+.side-links.open {
+  max-height: 300px;
+}
+.side-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px); /*we are not only rotating it we are also moving it in x and y directions*/
+}
+.side-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.side-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+.side-icon.open span:first-child {
+  transform: none;
+}
+.side-icon.open span:nth-child(2) {
+  opacity: 1;
+}
+.side-icon.open span:last-child {
+  transform: none;
+}
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 80vh;
+}
+.img img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+.section_txt {
+  text-align: center;
+}
+.section_p1 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.section_p2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.socials img {
+  cursor: pointer;
+  height: 3rem;
+}
+.btn-color {
+  border: 0.1rem solid black;
+  color: black;
+  width: 12rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.btn-color:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+#about {
+  position: relative;
+}
+.about-container {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.about-container,
+.about-details-container {
+  display: flex;
+}
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+.arrow {
+  position: absolute;
+  right: -6rem;
+  bottom: 5rem;
+}
+
+.details,
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  border: 0.1rem solid black;
+  border-radius: 2rem;
+  text-align: center;
+}
+.icon {
+  margin: 0 auto;
+  cursor: default;
+}
+#experience {
+  position: relative;
+}
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5.5rem;
+  justify-content: center;
+}
+article {
+  display: flex;
+  width: 9rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+.inside {
+  margin-top: -0.25rem;
+}
+.arrow2 {
+  position: absolute;
+  right: -6rem;
+  bottom: 2rem;
+}
+#projects {
+  position: relative;
+  margin-top: 1.5rem;
+}
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+footer{
+  text-align: center;
+  margin: 0 1rem;
+  height: 16vh;
+}
